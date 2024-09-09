@@ -1,0 +1,282 @@
+/* reset margin and padding on all elements*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/*---------------------Header and navigation--------------------*/
+.header-container{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.logo-container{
+    text-align: center;
+    margin-left: 10px;
+}
+.navigation-links{
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+.navigation-links a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation-links a:hover{
+    text-decoration: underline;
+}
+
+/*----------------------BANNER-------------------------------*/
+.banner-container{
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+/*---------------------Mood section------------------------------*/
+.mood-container{
+    position: relative;
+    background-image: url("images/magaluf-beach.jpg");
+    height: 60vh; /* how much takes up screen*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mood-box{
+    position: absolute;
+    width: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: o 2px 4px rgba(0,0,0,0.1);
+}
+/*------------------TRAVEL TIPS ---------------------------------*/
+.travel-tips-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.travel-tips-image{
+    height: 20px;
+}
+.travel-tips-accordion{
+    width: 370px;
+}
+summary{
+    cursor: pointer;
+    background-color: rgb(186, 174, 196);
+    color: rgb(86, 64, 64);
+    box-shadow: 0 2px 4px black;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+details div{
+    padding: 32px 16px;
+    border: 1px solid whitesmoke;
+    border: 3px;
+    margin-bottom: 2px;
+    width: 370px;
+}
+/*----------------TRAVEL TIPS END--------------------*/
+
+/*-------------TRAVEL OPTIONS--------------*/
+
+.option-container{
+    background-color:aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+}
+
+.option-header{
+    text-align: center;
+}
+
+.option-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.option-image{
+    width: 300px;
+    border-radius: 4px;
+}
+
+.option-card-content{
+    margin-top: 10px;
+    width: 300px;
+}
+.option-card p{
+    color: blueviolet;
+}
+
+.option-card:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.option-card:nth-child(3) {
+    flex-direction: row-reverse; /*not working*/
+}
+
+/*------------------Testimonials--------------*/
+.testimonials{
+    margin-top: 80px;
+}
+
+.testimonial-header{
+    text-align: center;
+}
+
+.testimonial.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; /* flex itself depending on screen size*/
+    gap: 20px;
+}
+
+.testimonial-card{
+    background-color: rgb(184, 172, 157);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px black;
+    width: 300px;
+    align-items: center;
+}
+
+.testimonial-card img{
+    border-radius: 100px;
+    margin-bottom: 10px;
+    height: 100px;
+    align-items: center;
+}
+.testimonial-text{
+    margin-bottom: 10px;
+}
+
+.user-name{
+    font-weight: bold;
+}
+
+.job-position{
+    color: rgb(5, 18, 18);
+}
+/*-------------------NEWSLETTER------------*/
+.newsletter{
+    margin-top: 80px;
+}
+.newsletter-form-container{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+.newsletterlabel{
+    display: none;
+}
+.newsletter-signup-form input[type="email"] {
+    width: 250px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.subscribebutton {
+    width: 250px;
+    padding: 15px;
+    margin: 5px;
+    background-color: cadetblue;
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/*----------- FAT FOOTER----------*/
+.fat-footer{
+    margin-top: 80px;
+    background-color: beige;
+}
+
+.fat-footer-container{
+    display: flex; /* children behaves like a flexbox*/
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    column-gap: 15px; /*not working*/
+}
+.fat-footer-container h3{
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.contact-info,
+.about-us,
+.footer-links{
+    width: 250px;
+}
+
+.fat-footer ul{
+    list-style: none; /*  turn off bullet points*/
+}
+.footer-links a{
+    text-decoration: none; /*remove underline for text*/
+    margin-bottom: 5px;
+}
+
+/* -----------------FAT FOOTER END---------------------------*/
+
+/* ---------------------MEDIA QUERIES-------------------*/
+
+
+@media screen and (min-width: 900px) {
+
+.travel-tips-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+
+
+
